@@ -183,11 +183,11 @@ main {
 
             img:hover {
                 transform: scale(1.1);
-                box-shadow: 0 0 10px #3e085e;
+                box-shadow: 0 0 10px #a52aed;
             }
 
             h1 {
-                color: white;
+                color: #3e085e;
                 text-align: center;
             }
 
@@ -408,12 +408,10 @@ footer {
                 width: 80%;
                 height: 600px;
                 background-color: black;
-                box-shadow: 0 0 50px #a52aed;
                 border-radius: 10px;
 
                 img {
                     width: 200px;
-                    box-shadow: 0 0 10px #a52aed;
                     transition: all 0.5s;
                     border-radius: 5px;
                 }
@@ -430,13 +428,11 @@ footer {
                     flex-direction: column;
 
                     h1 {
-                        color: white;
                         text-align: center;
                         font-size: 28px;
                     }
 
                     p {
-                        color: white;
                         text-align: center;
                         font-size: 14px;
                         max-width: 90%
@@ -639,7 +635,6 @@ footer {
 
                 img {
                     width: 150px;
-                    box-shadow: 0 0 10px #a52aed;
                     transition: all 0.5s;
                     border-radius: 5px;
                 }
@@ -656,15 +651,13 @@ footer {
                     flex-direction: column;
 
                     h1 {
-                        color: white;
                         text-align: center;
                         font-size: 18px;
                     }
 
                     p {
-                        color: white;
                         text-align: center;
-                        font-size: 14px;
+                        font-size: 12px;
                         max-width: 90%
                     }
                 }
