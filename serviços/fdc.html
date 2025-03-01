@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Tecnologia Jundiaí - Formatação de Computadores</title>
+    <meta property="og:title" content="Jack Tecnologia Jundiaí">
+    <meta property="og:description"
+        content="A Jack Tecnologia faz diversos serviços tecnologicos, entre eles: Instalação de câmeras, Desenvolvimento de sites & Formatação de computadores">
+    <meta property="og:image"
+        content="https://cdn.discordapp.com/attachments/1109208603769970758/1342959893803438180/logo_jm.png?ex=67bb885d&is=67ba36dd&hm=394b9c50a5f2e0dd338d49e405aa55c98b2cc53efdffcf7b64fae0fe8d890b8e&">
+    <meta property="og:url" content="https://jrmtreiber.github.io/jminformatica/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jack Tecnologia Jundiaí">
+    <meta name="twitter:description"
+        content="A Jack Tecnologia faz diversos serviços tecnologicos, entre eles: Instalação de câmeras, Desenvolvimento de sites & Formatação de computadores">
+    <meta name="twitter:image"
+        content="https://cdn.discordapp.com/attachments/1109208603769970758/1342959893803438180/logo_jm.png?ex=67bb885d&is=67ba36dd&hm=394b9c50a5f2e0dd338d49e405aa55c98b2cc53efdffcf7b64fae0fe8d890b8e&">
+    <link rel="stylesheet" href="./CSS/fdc.css">
+    <link rel="icon" href="../IMGS/logo_jack.png">
+</head>
+
+<body>
+    <header>
+        <div class="pai_header1">
+            <div class="header1">
+                <div class="texto">
+                    <img src="../IMGS/telefone.png" alt="Telefone">
+                    <a href="http://wa.me/5511940318619" target="_blank">
+                        <p>(11) 94031-8619</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header2" id="header2">
+            <a href="../index.html"><img src="../IMGS/logo_jack.png" alt="Logo"></a>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
+            <label for="menu-toggle" class="overlay"></label>
+
+            <ul class="nav-menu">
+                <a href="../index.html">
+                    <li>Home</li>
+                </a>
+                <a href="../orcamento.html">
+                    <li>Orçamento</li>
+                </a>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="la_p">
+            <div class="la2">MENSAGEM</div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <!-- <div class="img_footer">
+                <a class="principal_img" href="./index.html"><img src="./IMGS/logo_jm.png" alt="Jm Informática"></a>
+            </div> -->
+
+            <div class="all">
+                <div>
+                    <h1>Contato</h1>
+                    <a href="http://wa.me/5511940318619" target="_blank">
+                        <div class="wpp">
+                            <img src="../IMGS/wpp.png" alt="WhatsApp">
+                            <p>Whatsapp</p>
+                        </div>
+                    </a>
+                </div>
+
+                <div>
+                    <h1>Localização</h1>
+                    <a href="https://www.google.com/maps/place/Jundiaí+-+Aglomeração+Urbana+de+Jundiaí,+Jundiaí+-+SP/data=!4m2!3m1!1s0x94cf24293cc00531:0xf686a1c1163c6bbb?sa=X&ved=1t:242&ictx=111"
+                        target="_blank">
+                        <div class="wpp2">
+                            <img src="../IMGS/localizacao.png" alt="Localizacao">
+                            <p>Jundiaí e Região</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- <div>
+                <h1>Outros</h1>
+                <p>asdasd</p>
+            </div> -->
+            </div>
+        </div>
+
+        <!-- <div class="d_footer">
+            <p>Desenvolvido por </p>
+        </div> -->
+    </footer>
+
+    <script>window.onscroll = function () {
+            stickyHeader();
+        };
+
+        var header2 = document.getElementById("header2");
+
+        function stickyHeader() {
+            if (window.innerWidth > 768) {
+                if (window.pageYOffset > 100) {
+                    header2.style.position = "fixed";
+                    header2.style.top = "0";
+                } else {
+                    header2.style.position = "absolute";
+                    header2.style.top = "auto";
+                }
+            } else {
+                header2.style.position = "absolute";
+                header2.style.top = "auto";
+            }
+        }</script>
+</body>
+
+</html>
