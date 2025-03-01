@@ -23,7 +23,7 @@ function moveSlide(direction) {
 function startAutoSlide() {
     intervalId = setInterval(() => {
         showSlide(currentIndex + 1);
-    }, 10000);
+    }, 20000);
 }
 
 setInterval(() => {

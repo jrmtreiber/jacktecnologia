@@ -4,8 +4,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jack Tecnologia Jundiaí - PABX Jundiaí - Instalação de câmera Jundiaí - Desenvolvimento de sites Jundiaí -
-        Formatação Jundiaí</title>
+    <title>Jack Tecnologia Jundiaí - Faça seu orçamento</title>
     <meta property="og:title" content="Jack Tecnologia Jundiaí">
     <meta property="og:description"
         content="A Jack Tecnologia faz diversos serviços tecnologicos, entre eles: Instalação de câmeras, Desenvolvimento de sites & Formatação de computadores">
@@ -46,6 +45,9 @@
             <ul class="nav-menu">
                 <a href="./index.html">
                     <li>Home</li>
+                </a>
+                <a href="./produtos.html">
+                    <li>Produtos</li>
                 </a>
                 <a href="./orcamento.html">
                     <li>Orçamento</li>
@@ -159,6 +161,10 @@
         document.getElementById("contato").addEventListener("input", function (event) {
             let contato = event.target.value.replace(/\D/g, "");
 
+            if (contato.length > 13) {
+                contato = contato.slice(0, 11);
+            }
+
             if (contato.length > 10) {
                 contato = contato.replace(/^(\d{2})(\d{5})(\d{4})$/, "($1) $2-$3");
             } else if (contato.length > 5) {
@@ -169,8 +175,9 @@
                 contato = contato.replace(/^(\d{0,2})$/, "($1");
             }
 
-            event.target.value = contato;
+            event.target.value = contato; 
         });
+
 
         document.getElementById("formOrcamento").addEventListener("submit", function (event) {
             event.preventDefault();
@@ -181,16 +188,10 @@
             const mensagem = document.getElementById("mensagem").value;
 
             const data = {
-                content: "**📩 Novo Pedido de Orçamento**",
                 embeds: [{
-                    title: "📄 Dados do Cliente",
+                    title: "📄 - Dados do cliente:",
                     color: 3447003,
-                    fields: [
-                        { name: "👤 Nome", value: nome, inline: true },
-                        { name: "📧 E-mail", value: email, inline: true },
-                        { name: "📞 Contato", value: contato, inline: true },
-                        { name: "📝 Mensagem", value: mensagem }
-                    ],
+                    description: `> 👤 - **Nome:** \`${nome}\`\n> 📧 - **E-Mail:** \`${email}\`\n> 📞 - **Contato:** \`${contato}\`\n> 📝 - **Mensagem:** \`${mensagem}\``,
                     timestamp: new Date()
                 }]
             };
