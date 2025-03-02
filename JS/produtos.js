@@ -63,11 +63,11 @@ function searchProducts() {
     const productContainers = document.querySelectorAll('.produto');
     let foundAny = false;
 
-    productContainers.forEach(function(container) {
+    productContainers.forEach(function (container) {
         const headings = container.querySelectorAll('h1');
         let foundInThisContainer = false;
 
-        headings.forEach(function(heading) {
+        headings.forEach(function (heading) {
             const headingText = heading.textContent.toLowerCase();
             if (headingText.includes(searchValue)) {
                 foundInThisContainer = true;
@@ -94,21 +94,28 @@ function searchProducts() {
 
 // Produtos
 const produtos = [
-    { titulo: "Teclado", descricao: "Descrição", imagem: "./IMGS/banner4.png" },
-    { titulo: "Mouse", descricao: "Descrição", imagem: "./IMGS/banner4.png" },
-    { titulo: "Fone", descricao: "Descrição", imagem: "./IMGS/banner4.png" },
-    { titulo: "Monitor", descricao: "Descrição", imagem: "./IMGS/banner5.png" },
-    { titulo: "Gabinete", descricao: "Descrição", imagem: "./IMGS/banner5.png" },
-    { titulo: "Microfone", descricao: "Descrição", imagem: "./IMGS/banner5.png" },
+    { titulo: "Teclado <br> Kumara", descricao: "Teclado Gamer <br> Durabilidade Reforçada", imagem: "./IMGS/kumara.jpg", valor: "R$159,90" },
+    { titulo: "Mouse <br> G-PRO", descricao: "Mouse sem fio para jogos", imagem: "./IMGS/gpro.jpg", valor: "R$96,99" },
+    { titulo: "Webcam <br> C920", descricao: "Videochamadas Full HD 1080p com obturador de privacidade", imagem: "./IMGS/c920.jpg", valor: "R$576,00" },
+
+    { titulo: "Monitor", descricao: "Descrição", imagem: "./IMGS/banner5.png", valor: "R$0" },
+    { titulo: "Gabinete", descricao: "Descrição", imagem: "./IMGS/banner5.png", valor: "R$0" },
+    { titulo: "Microfone", descricao: "Descrição", imagem: "./IMGS/banner5.png", valor: "R$0" },
+
+    { titulo: "CPU", descricao: "Descrição", imagem: "./IMGS/banner4.png", valor: "R$0" },
+    { titulo: "GPU", descricao: "Descrição", imagem: "./IMGS/banner4.png", valor: "R$0" },
+    { titulo: "RAM", descricao: "Descrição", imagem: "./IMGS/banner4.png", valor: "R$0" },
 ];
 
-const produtosPorPagina = 3;  
-let paginaAtual = 1; 
-let produtosFiltrados = produtos;  
+// 
+
+const produtosPorPagina = 3;
+let paginaAtual = 1;
+let produtosFiltrados = produtos;
 
 function mostrarProdutos() {
     const containerProdutos = document.getElementById("produtos");
-    containerProdutos.innerHTML = '';  
+    containerProdutos.innerHTML = '';
 
     const inicio = (paginaAtual - 1) * produtosPorPagina;
     const fim = inicio + produtosPorPagina;
@@ -126,9 +133,10 @@ function mostrarProdutos() {
 
         produtoDiv.innerHTML = `
             <div class="imagemProduto">
-                <img src="${produto.imagem}" alt="">
+                <img src="${produto.imagem}" alt="Produto">
+                <div class="valor">${produto.valor}</div>
             </div>
-            <div class="descricaoProdutos">
+            <div class="descricaoProdutos" style="text-align: center;">
                 <h1>${produto.titulo}</h1>
                 <p>${produto.descricao}</p>
             </div>
@@ -162,8 +170,8 @@ function alterarPagina(quantidade) {
 function pesquisarProdutos() {
     const termoPesquisa = document.getElementById("campoPesquisa").value.toLowerCase();
 
-    produtosFiltrados = produtos.filter(produto => 
-        produto.titulo.toLowerCase().includes(termoPesquisa) || 
+    produtosFiltrados = produtos.filter(produto =>
+        produto.titulo.toLowerCase().includes(termoPesquisa) ||
         produto.descricao.toLowerCase().includes(termoPesquisa)
     );
 
@@ -173,21 +181,21 @@ function pesquisarProdutos() {
 }
 
 function limparPesquisa() {
-    document.getElementById("campoPesquisa").value = '';  
-    produtosFiltrados = produtos;  
-    paginaAtual = 1; 
-    toggleClearButton();  
-    mostrarProdutos(); 
+    document.getElementById("campoPesquisa").value = '';
+    produtosFiltrados = produtos;
+    paginaAtual = 1;
+    toggleClearButton();
+    mostrarProdutos();
 }
 
 function toggleClearButton() {
     const campoPesquisa = document.getElementById("campoPesquisa");
     const limparPesquisaBtn = document.getElementById("limparPesquisa");
-    
+
     if (campoPesquisa.value.trim() !== "") {
-        limparPesquisaBtn.style.display = "block";  
+        limparPesquisaBtn.style.display = "block";
     } else {
-        limparPesquisaBtn.style.display = "none"; 
+        limparPesquisaBtn.style.display = "none";
     }
 }
 
