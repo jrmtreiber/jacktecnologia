@@ -134,6 +134,29 @@ main {
         height: 450px;
         overflow: hidden;
 
+        .carousel-indicators {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+        
+        .indicator {
+            width: 10px;
+            height: 10px;
+            background-color: #fff;
+            border-radius: 50%;
+            cursor: pointer;
+            transition: background-color 0.3s;
+        }
+        
+        .indicator.active {
+            background-color: #000;
+        }
+
 
         .carousel-images {
             display: flex;
@@ -464,7 +487,7 @@ main {
         width: 100%;
         height: 650px;
         border-bottom: solid 1px rgba(0, 0, 0, 0.3);
-        box-shadow: 0 0 10px #2A83ED;
+        box-shadow: 0 0 10px orange;
         background-color: black;
 
         .titulo {
@@ -487,7 +510,7 @@ main {
             gap: 2rem;
             width: 100%;
             height: 500px;
-    
+
             .colunas {
                 display: flex;
                 justify-content: center;
@@ -495,26 +518,26 @@ main {
                 gap: 4rem;
                 width: 100%;
                 height: 500px;
-    
+
                 .produto {
                     width: 300px;
                     height: 470px;
                     box-shadow: 0 0 10px orange;
                     border-radius: 10px;
                     background-color: black;
-    
+
                     .imagemProduto {
                         display: flex;
                         justify-content: center;
                         align-items: center;
                         width: 100%;
                         height: 200px;
-    
+
                         img {
                             width: 250px;
                         }
                     }
-    
+
                     .descricaoProdutos {
                         user-select: none;
                         display: flex;
@@ -523,17 +546,17 @@ main {
                         flex-direction: column;
                         width: 100%;
                         height: 150px;
-    
+
                         h1 {
                             color: orange;
                         }
-    
+
                         p {
                             margin: 0;
                             color: white;
                         }
                     }
-    
+
                     .botao {
                         user-select: none;
                         display: flex;
@@ -541,7 +564,7 @@ main {
                         align-items: center;
                         width: 100%;
                         height: 100px;
-    
+
                         button {
                             cursor: pointer;
                             background-color: orange;
@@ -551,7 +574,7 @@ main {
                             border: 0;
                             transition: all 0.3s;
                         }
-    
+
                         button:hover {
                             background-color: rgb(83, 55, 2);
                             color: white;
@@ -1125,21 +1148,16 @@ footer {
         .jack_descricao4 {
             width: 100%;
             height: 1800px;
-            border-bottom: solid 1px rgba(0, 0, 0, 0.3);
-            box-shadow: 0 0 10px #2A83ED;
-    
+
             .titulo {
                 display: flex;
                 justify-content: center;
                 align-items: flex-end;
                 width: 100%;
                 height: 100px;
-    
-                h1 {
-                    color: orange;
-                }
+
             }
-    
+
             .produtos_container {
                 display: flex;
                 justify-content: center;
@@ -1148,7 +1166,7 @@ footer {
                 gap: 2rem;
                 width: 100%;
                 height: 1700px;
-        
+
                 .colunas {
                     display: flex;
                     justify-content: center;
@@ -1157,26 +1175,23 @@ footer {
                     gap: 4rem;
                     width: 100%;
                     height: 3000px;
-        
+
                     .produto {
                         width: 300px;
                         height: 470px;
-                        box-shadow: 0 0 10px orange;
-                        border-radius: 10px;
-                        background-color: black;
-        
+
                         .imagemProduto {
                             display: flex;
                             justify-content: center;
                             align-items: center;
                             width: 100%;
                             height: 200px;
-        
+
                             img {
                                 width: 250px;
                             }
                         }
-        
+
                         .descricaoProdutos {
                             user-select: none;
                             display: flex;
@@ -1185,17 +1200,8 @@ footer {
                             flex-direction: column;
                             width: 100%;
                             height: 150px;
-        
-                            h1 {
-                                color: orange;
-                            }
-        
-                            p {
-                                margin: 0;
-                                color: white;
-                            }
                         }
-        
+
                         .botao {
                             user-select: none;
                             display: flex;
@@ -1203,10 +1209,9 @@ footer {
                             align-items: center;
                             width: 100%;
                             height: 100px;
-        
+
                             button {
                                 cursor: pointer;
-                                background-color: orange;
                                 width: 150px;
                                 height: 30px;
                                 border-radius: 10px;
