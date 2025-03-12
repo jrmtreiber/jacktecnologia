@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Jack Tecnologia Jundiaí - Luz Solar</title>
+    <meta property="og:title" content="Jack Tecnologia Jundiaí">
+    <meta property="og:description"
+        content="A Jack Tecnologia faz diversos serviços tecnologicos, entre eles: Instalação de câmeras, Desenvolvimento de sites & Formatação de computadores">
+    <meta property="og:image"
+        content="https://cdn.discordapp.com/attachments/1109208603769970758/1342959893803438180/logo_jm.png?ex=67bb885d&is=67ba36dd&hm=394b9c50a5f2e0dd338d49e405aa55c98b2cc53efdffcf7b64fae0fe8d890b8e&">
+    <meta property="og:url" content="https://jrmtreiber.github.io/jminformatica/">
+    <meta property="og:type" content="website">
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Jack Tecnologia Jundiaí">
+    <meta name="twitter:description"
+        content="A Jack Tecnologia faz diversos serviços tecnologicos, entre eles: Instalação de câmeras, Desenvolvimento de sites & Formatação de computadores">
+    <meta name="twitter:image"
+        content="https://cdn.discordapp.com/attachments/1109208603769970758/1342959893803438180/logo_jm.png?ex=67bb885d&is=67ba36dd&hm=394b9c50a5f2e0dd338d49e405aa55c98b2cc53efdffcf7b64fae0fe8d890b8e&">
+    <link rel="stylesheet" href="./CSS/luz-solar.css">
+    <link rel="icon" href="../IMGS/logo_jack.png">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+</head>
+
+<body>
+    <header>
+        <div class="pai_header1">
+            <div class="header1">
+                <div class="texto">
+                    <img src="../IMGS/telefone.png" alt="Telefone">
+                    <a href="http://wa.me/5511940318619" target="_blank">
+                        <p>(11) 94031-8619</p>
+                    </a>
+                </div>
+            </div>
+        </div>
+
+        <div class="header2" id="header2">
+            <a href="../index.html"><img src="../IMGS/logo_jack.png" alt="Logo"></a>
+
+            <input type="checkbox" id="menu-toggle">
+            <label for="menu-toggle" class="menu-icon">☰</label>
+            <label for="menu-toggle" class="overlay"></label>
+
+            <ul class="nav-menu">
+                <a href="../index.html">
+                    <li>Home</li>
+                </a>
+                <a href="../produtos.html">
+                    <li>Produtos</li>
+                </a>
+                <a href="../orcamento.html">
+                    <li>Orçamento</li>
+                </a>
+            </ul>
+        </div>
+    </header>
+
+    <main>
+        <div class="quad_p">
+            <div class="separacoes">
+                <div class="fotos"></div>
+            </div>
+
+            <div class="separacoes">
+                <div class="text_p">
+                    <div class="texts">
+                        <h1>asdasd</h1>
+                        <p>asdasdasdasd</p>
+                    </div>
+                    <a href="http://wa.me/5511940318619"><button>COMPRAR</button></a>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <footer>
+        <div class="footer">
+            <!-- <div class="img_footer">
+                <a class="principal_img" href="./index.html"><img src="./IMGS/logo_jm.png" alt="Jm Informática"></a>
+            </div> -->
+
+            <div class="all">
+                <div>
+                    <h1>Contato</h1>
+                    <a href="http://wa.me/5511940318619" target="_blank">
+                        <div class="wpp">
+                            <img src="../IMGS/wpp.png" alt="WhatsApp">
+                            <p>Whatsapp</p>
+                        </div>
+                    </a>
+                </div>
+                <!-- <div>
+                <h1>Outros</h1>
+                <p>asdasd</p>
+            </div> -->
+            </div>
+        </div>
+
+        <!-- <div class="d_footer">
+            <p>Desenvolvido por </p>
+        </div> -->
+    </footer>
+
+    <script>
+        let currentIndex = 0;
+        let intervalId;
+
+        function showSlide(index) {
+            const slides = document.querySelectorAll('.carousel-item');
+            if (index >= slides.length) {
+                currentIndex = 0;
+            } else if (index < 0) {
+                currentIndex = slides.length - 1;
+            } else {
+                currentIndex = index;
+            }
+
+            const newTransform = `translateX(-${currentIndex * 100}%)`;
+            document.querySelector('.carousel-images').style.transform = newTransform;
+
+            updateIndicators();
+        }
+
+        function moveSlide(direction) {
+            clearInterval(intervalId);
+            showSlide(currentIndex + direction);
+            startAutoSlide();
+        }
+
+        function moveSlideTo(index) {
+            clearInterval(intervalId);
+            showSlide(index);
+            startAutoSlide();
+        }
+
+        function startAutoSlide() {
+            intervalId = setInterval(() => {
+                showSlide(currentIndex + 1);
+            }, 10000);
+        }
+
+        function updateIndicators() {
+            const indicators = document.querySelectorAll('.indicator');
+            indicators.forEach((indicator, idx) => {
+                if (idx === currentIndex) {
+                    indicator.classList.add('active');
+                } else {
+                    indicator.classList.remove('active');
+                }
+            });
+        }
+
+        setInterval(() => {
+            showSlide(currentIndex + 1);
+        }, 10000);
+
+        showSlide(currentIndex);
+
+        // 
+
+        window.onscroll = function () {
+            stickyHeader();
+        };
+
+        var header2 = document.getElementById("header2");
+
+        function stickyHeader() {
+            if (window.innerWidth > 768) {
+                if (window.pageYOffset > 100) {
+                    header2.style.position = "fixed";
+                    header2.style.top = "0";
+                } else {
+                    header2.style.position = "absolute";
+                    header2.style.top = "auto";
+                }
+            } else {
+                header2.style.position = "absolute";
+                header2.style.top = "auto";
+            }
+        }
+
+        // 
+    </script>
+</body>
+
+</html>

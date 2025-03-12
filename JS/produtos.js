@@ -94,17 +94,7 @@ function searchProducts() {
 
 // Produtos
 const produtos = [
-    { titulo: "Teclado <br> Kumara", descricao: "Teclado Gamer <br> Durabilidade Reforçada", imagem: "./IMGS/kumara.jpg", valor: "R$159,90" },
-    { titulo: "Mouse <br> G-PRO", descricao: "Mouse sem fio para jogos", imagem: "./IMGS/gpro.jpg", valor: "R$96,99" },
-    { titulo: "Webcam <br> C920", descricao: "Videochamadas Full HD 1080p com obturador de privacidade", imagem: "./IMGS/c920.jpg", valor: "R$576,00" },
-
-    { titulo: "Monitor", descricao: "Descrição", imagem: "./IMGS/banner5.png", valor: "R$0" },
-    { titulo: "Gabinete", descricao: "Descrição", imagem: "./IMGS/banner5.png", valor: "R$0" },
-    { titulo: "Microfone", descricao: "Descrição", imagem: "./IMGS/banner5.png", valor: "R$0" },
-
-    { titulo: "CPU", descricao: "Descrição", imagem: "./IMGS/banner4.png", valor: "R$0" },
-    { titulo: "GPU", descricao: "Descrição", imagem: "./IMGS/banner4.png", valor: "R$0" },
-    { titulo: "RAM", descricao: "Descrição", imagem: "./IMGS/banner4.png", valor: "R$0" },
+    { titulo: "Luz Solar", descricao: "Lampada externa com carregamento atráves da energia solar", imagem: "./IMGS/produtos/luz-solar1.png", valor: "R$59,99", classImagem: "luz-solar", siteCompra: "../produtos/luz-solar.html" }
 ];
 
 // 
@@ -133,7 +123,7 @@ function mostrarProdutos() {
 
         produtoDiv.innerHTML = `
             <div class="imagemProduto">
-                <img src="${produto.imagem}" alt="Produto">
+                <img class="${produto.classImagem}" src="${produto.imagem}" alt="Produto">
                 <div class="valor">${produto.valor}</div>
             </div>
             <div class="descricaoProdutos" style="text-align: center;">
@@ -141,7 +131,7 @@ function mostrarProdutos() {
                 <p>${produto.descricao}</p>
             </div>
             <div class="botao">
-                <a href=""><button>COMPRAR</button></a>
+                <a href="${produto.siteCompra}"><button>COMPRAR</button></a>
             </div>
         `;
 
