@@ -94,7 +94,7 @@ function searchProducts() {
 
 // Produtos
 const produtos = [
-    { titulo: "Luz Solar", descricao: "Lampada externa com carregamento atráves da energia solar", imagem: "./IMGS/produtos/luz-solar1.png", valor: "R$59,99", classImagem: "luz-solar", siteCompra: "../produtos/luz-solar.html" }
+    { titulo: "Luz Solar", descricao: "Lampada externa com carregamento atráves da energia solar", imagem: "./IMGS/produtos/luz-solar1.png", valor: "R$59,99", classImagem: "luz-solar", siteCompra: "./produtos/luz-solar.html" }
 ];
 
 // 
