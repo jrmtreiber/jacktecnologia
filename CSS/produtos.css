@@ -189,6 +189,10 @@ main {
                 height: auto;
             }
 
+            .eletronicos {
+                width: 130px;
+            }
+
             img:hover {
                 transform: scale(1.1);
                 filter: drop-shadow(0 0 10px #2877D8);
@@ -210,6 +214,10 @@ main {
             img {
                 width: 220px;
                 height: auto;
+            }
+
+            .eletronicos {
+                width: 120px;
             }
 
             img:hover {
@@ -638,6 +646,10 @@ footer {
                 .roteador {
                     width: 80px;
                 }
+
+                .eletronicos {
+                    width: 60px;
+                }
             }
 
             .carousel-caption2 {
@@ -651,6 +663,10 @@ footer {
                 font-size: 24px;
                 z-index: 1000;
                 text-align: center;
+
+                .eletronicos {
+                    width: 60px;
+                }
 
                 img {
                     width: 100px;
