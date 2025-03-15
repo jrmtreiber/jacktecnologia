@@ -76,3 +76,33 @@ function stickyHeader() {
 }
 
 // 
+
+function mostrarMensagem() {
+    if (document.getElementById("mensagem")) return;
+
+    let mensagem = document.createElement("div");
+    mensagem.id = "mensagem";
+    mensagem.innerText = "⚠️ Indisponível no momento";
+
+    mensagem.style.position = "fixed";
+    mensagem.style.top = "50%";
+    mensagem.style.left = "50%";
+    mensagem.style.transform = "translate(-50%, -50%)";
+    mensagem.style.backgroundColor = "black";
+    mensagem.style.color = "white";
+    mensagem.style.padding = "20px";
+    mensagem.style.fontSize = "24px";
+    mensagem.style.fontWeight = "bold";
+    mensagem.style.borderRadius = "10px";
+    mensagem.style.textAlign = "center";
+    mensagem.style.animation = "piscar 1.5s infinite";
+    mensagem.style.zIndex = "1000";
+
+    document.body.appendChild(mensagem);
+
+    setTimeout(() => {
+        mensagem.remove();
+    }, 5000);
+}
+
+// 

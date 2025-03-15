@@ -59,20 +59,64 @@
 
     <main>
         <div class="quad_p">
-            <div class="separacoes">
-                <div class="fotos"></div>
-            </div>
+            <div class="separacoes1">
+                <div class="fotos">
+                    <button class="botao anterior">&#10094;</button>
+                    <div class="carrossel">
+                        <img src="../IMGS/produtos/luz-solar1.png" alt="Imagem 1" class="imagem" id="imagem1">
+                        <img src="../IMGS/produtos/luz-solar2.png" alt="Imagem 2" class="imagem" id="imagem2">
+                        <img src="../IMGS/produtos/luz-solar3.png" alt="Imagem 3" class="imagem" id="imagem3">
+                    </div>
+                    <button class="botao proximo">&#10095;</button>
+                </div>
+            
+                <div class="miniaturas">
+                    <img src="../IMGS/produtos/luz-solar1.png" alt="Imagem 1" class="miniatura" data-index="0">
+                    <img src="../IMGS/produtos/luz-solar2.png" alt="Imagem 2" class="miniatura" data-index="1">
+                    <img src="../IMGS/produtos/luz-solar3.png" alt="Imagem 3" class="miniatura" data-index="2">
+                </div>
+            </div>            
 
-            <div class="separacoes">
+            <div class="separacoes2">
                 <div class="text_p">
                     <div class="texts">
-                        <h1>asdasd</h1>
-                        <p>asdasdasdasd</p>
+                        <h1>Arandela Solar</h1>
+                        <div class="descricao-produto">
+                            <p>Arandela Solar com Lâmpada Filamento LED é um produto que une sofisticação e praticidade
+                                para iluminação exterior. <br><br>
+
+                                Durante o dia, o carregamento solar é totalmente automático, garantindo que a arandela
+                                esteja pronta para iluminar seu espaço ao anoitecer. À noite, o sistema inteligente de
+                                iluminação se ajusta automaticamente conforme a função escolhida, proporcionando uma
+                                atmosfera aconchegante e segura. <br><br>
+
+                                Para um desempenho ótimo, recomenda-se expor a placa solar diretamente ao sol ao longo
+                                do dia, sem qualquer obstrução. Isso garante uma carga completa da bateria, permitindo
+                                que a arandela forneça iluminação por até 4 a 5 horas, dependendo do nível de carga
+                                recebida. Quanto mais sol a placa solar receber, mais tempo a arandela poderá iluminar
+                                seu espaço. <br><br>
+
+                                1ª FUNÇÃO: Permanece desligada e acende sua luz máxima sempre que detectar movimento.
+                                <br><br>
+
+                                2ª FUNÇÃO: Permanece ligada em luz fraca e acende luz máxima ao detectar movimento.
+                                <br><br>
+
+                                3ª FUNÇÃO: Permanece ligada de forma constante em luz média mesmo sem detectar
+                                movimento. <br><br>
+
+                                A instalação é extremamente simples, sem a necessidade de gastos adicionais com energia
+                                elétrica ou contratação de mão de obra especializada. A arandela é totalmente resistente
+                                à água, podendo ser instalada em praticamente qualquer lugar que receba luz solar, como
+                                corredores, entradas, garagens, varandas, calçadas, quintais ou em qualquer lugar que
+                                sua imaginação permitir.
+                            </p>
+                        </div>
+                        <h1 class="valor">R$59,99</h1>
+                        <a href="http://wa.me/5511940318619"><button>COMPRAR</button></a>
                     </div>
-                    <a href="http://wa.me/5511940318619"><button>COMPRAR</button></a>
                 </div>
             </div>
-        </div>
     </main>
 
     <footer>
@@ -103,86 +147,7 @@
         </div> -->
     </footer>
 
-    <script>
-        let currentIndex = 0;
-        let intervalId;
-
-        function showSlide(index) {
-            const slides = document.querySelectorAll('.carousel-item');
-            if (index >= slides.length) {
-                currentIndex = 0;
-            } else if (index < 0) {
-                currentIndex = slides.length - 1;
-            } else {
-                currentIndex = index;
-            }
-
-            const newTransform = `translateX(-${currentIndex * 100}%)`;
-            document.querySelector('.carousel-images').style.transform = newTransform;
-
-            updateIndicators();
-        }
-
-        function moveSlide(direction) {
-            clearInterval(intervalId);
-            showSlide(currentIndex + direction);
-            startAutoSlide();
-        }
-
-        function moveSlideTo(index) {
-            clearInterval(intervalId);
-            showSlide(index);
-            startAutoSlide();
-        }
-
-        function startAutoSlide() {
-            intervalId = setInterval(() => {
-                showSlide(currentIndex + 1);
-            }, 10000);
-        }
-
-        function updateIndicators() {
-            const indicators = document.querySelectorAll('.indicator');
-            indicators.forEach((indicator, idx) => {
-                if (idx === currentIndex) {
-                    indicator.classList.add('active');
-                } else {
-                    indicator.classList.remove('active');
-                }
-            });
-        }
-
-        setInterval(() => {
-            showSlide(currentIndex + 1);
-        }, 10000);
-
-        showSlide(currentIndex);
-
-        // 
-
-        window.onscroll = function () {
-            stickyHeader();
-        };
-
-        var header2 = document.getElementById("header2");
-
-        function stickyHeader() {
-            if (window.innerWidth > 768) {
-                if (window.pageYOffset > 100) {
-                    header2.style.position = "fixed";
-                    header2.style.top = "0";
-                } else {
-                    header2.style.position = "absolute";
-                    header2.style.top = "auto";
-                }
-            } else {
-                header2.style.position = "absolute";
-                header2.style.top = "auto";
-            }
-        }
-
-        // 
-    </script>
+    <script src="./JS/script.js"></script>
 </body>
 
 </html>
