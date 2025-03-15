@@ -97,7 +97,7 @@ const produtos = [
     { titulo: "PC Gamer", descricao: "Computador para <br> jogos/trabalho/estudos", imagem: "./IMGS/produtos/pcgamer1.jpg", valor: "R$1599", classImagem: "luz-solar", siteCompra: "././produtos/pcgamer.html" },
     { titulo: "Arandela Solar", descricao: "Arandela externa com carregamento atráves da energia solar", imagem: "./IMGS/produtos/luz-solar1.png", valor: "R$59,99", classImagem: "luz-solar", siteCompra: "././produtos/luz-solar.html" },
     { titulo: "Humidificador <br> Spark", descricao: "liberar vapor de água aos poucos no cômodo pra evitar que o ar fique seco demais", imagem: "./IMGS/produtos/humidificador1.jpg", valor: "R$69,90", classImagem: "humidifier", siteCompra: "././produtos/humidificador.html" },
-    { titulo: "Fone Bluetooth", descricao: "a", imagem: "", valor: "R$67,50", classImagem: "fone_btf", siteCompra: "" }
+    { titulo: "Fone De Ouvido Bluetooth", descricao: "Cancelamento de ruído <br> ativo para ligações", imagem: "./IMGS/produtos/fone1.jpg", valor: "R$67,50", classImagem: "fone_btf", siteCompra: "././produtos/fone.html" }
     
 ];
 

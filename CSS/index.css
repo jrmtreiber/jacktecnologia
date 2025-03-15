@@ -162,7 +162,6 @@ main {
             background-color: #000;
         }
 
-
         .carousel-images {
             display: flex;
             transition: transform 1s ease-in-out;
@@ -204,7 +203,7 @@ main {
             }
 
             .eletronicos {
-                width: 130px;
+                width: 120px;
             }
 
             img:hover {
@@ -226,7 +225,7 @@ main {
             text-align: center;
 
             .eletronicos {
-                width: 120px;
+                width: 110px;
             }
 
             img {
@@ -725,6 +724,29 @@ footer {
             height: 450px;
             overflow: hidden;
 
+            .carousel-indicators {
+                position: absolute;
+                bottom: 5px;
+                left: 50%;
+                transform: translateX(-50%);
+                display: flex;
+                justify-content: center;
+                gap: 10px;
+            }
+
+            .indicator {
+                width: 10px;
+                height: 10px;
+                background-color: #000000;
+                border-radius: 50%;
+                cursor: pointer;
+                transition: background-color 0.3s;
+            }
+    
+            .indicator.active {
+                background-color: #2A83ED;
+            }
+
 
             .carousel-images {
                 display: flex;
@@ -770,7 +792,7 @@ footer {
                 }
 
                 .eletronicos {
-                    width: 45px;
+                    width: 50px;
                 }
             }
 
@@ -791,7 +813,7 @@ footer {
                 }
 
                 .eletronicos {
-                    width: 45px;
+                    width: 50px;
                 }
             }
 

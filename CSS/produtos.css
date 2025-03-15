@@ -190,7 +190,7 @@ main {
             }
 
             .eletronicos {
-                width: 130px;
+                width: 120px;
             }
 
             img:hover {
@@ -217,7 +217,7 @@ main {
             }
 
             .eletronicos {
-                width: 120px;
+                width: 110px;
             }
 
             img:hover {
@@ -378,6 +378,13 @@ main {
                     height: 200px;
 
                     .luz-solar {
+                        width: 250px;
+                        height: 140px;
+                        border-radius: 10px;
+                        /* filter: brightness(30%); */
+                    }
+
+                    .fone_btf {
                         width: 250px;
                         height: 140px;
                         border-radius: 10px;
@@ -648,7 +655,7 @@ footer {
                 }
 
                 .eletronicos {
-                    width: 60px;
+                    width: 50px;
                 }
             }
 
@@ -665,7 +672,7 @@ footer {
                 text-align: center;
 
                 .eletronicos {
-                    width: 60px;
+                    width: 50px;
                 }
 
                 img {
